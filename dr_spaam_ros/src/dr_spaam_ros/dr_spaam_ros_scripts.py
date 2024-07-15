@@ -77,7 +77,7 @@ class DrSpaamROS:
         # convert to ros msg and publish
         dets_msg = detections_to_pose_array(dets_xy, dets_cls)
         dets_msg.header = msg.header
-        dets_msg.scan = msg
+        # dets_msg.scan = msg
         # print(dets_msg)
         self._dets_pub.publish(dets_msg)
         # rospy.loginfo("publish LegPoseArray")
